@@ -1,0 +1,4 @@
+source /opt/conda/bin/activate nsls2-analysis-2021-2.0-local
+pymca
+
+

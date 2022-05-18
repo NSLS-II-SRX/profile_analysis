@@ -1,0 +1,4 @@
+export PYTHONPATH=/nsls2/data/srx/shared/config/bluesky_overlay/2022-2.2-py39-tiled/lib/python3.9/site-packages
+source /opt/conda/bin/activate 2022-2.2-py39-tiled
+ipython --profile=analysis --ipython-dir=$HOME/.ipython
+
