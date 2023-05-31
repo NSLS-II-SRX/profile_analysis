@@ -1,0 +1,15 @@
+network:
+  zmq_publish_console: true
+startup:
+  keep_re: true
+  startup_profile: collection
+  ignore_invalid_plans: false
+worker:
+  use_ipython_kernel: true
+  ipython_matplotlib: qt5
+  ipython_kernel_ip: auto 
+operation:
+  print_console_output: true
+  console_logging_level: NORMAL
+  emergency_lock_key: custom_lock_key
+
