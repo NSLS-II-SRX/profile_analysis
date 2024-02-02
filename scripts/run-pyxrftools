@@ -1,5 +1,16 @@
 export ENV_NAME=$(eval "echo $BS_AN_ENV | rev | cut -d/ -f1 | rev")
-export PYTHONPATH=/nsls2/data/srx/shared/config/bluesky_overlay/"$ENV_NAME"/lib/python3.10/site-packages
+
+if [[ $ENV_NAME == *"py39"* ]]; then
+    PYTHON_VER=3.9
+elif [[ $ENV_NAME == *"py310"* ]]; then
+    PYTHON_VER=3.10
+elif [[ $ENV_NAME == *"py311"* ]]; then
+    PYTHON_VER=3.11
+elif [[ $ENV_NAME == *"py312"* ]]; then
+    PYTHON_VER=3.12
+fi
+
+export PYTHONPATH=/nsls2/data/srx/shared/config/bluesky_overlay/"$ENV_NAME"/lib/python"$PYTHON_VER"/site-packages
 source /opt/conda/bin/activate $BS_AN_ENV
 ipython --profile=analysis --ipython-dir=$HOME/.ipython
 
